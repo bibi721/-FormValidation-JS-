@@ -1,0 +1,162 @@
+/* Set up custom CSS variables */
+:root {
+    /* Colors */
+    --primary-color: hsl(210, 100%, 40%); /* Soft Blue */
+    --primary-color-dark: hsl(210, 100%, 30%); /* Darker Blue */
+    --primary-color-light: hsl(210, 100%, 50%); /* Lighter Blue */
+    --accent-color: #e74c3c; /* Red for errors */
+    --background-color: #ffffff; /* White background */
+    --input-bg-color: #f8f8f8; /* Light grey background for inputs */
+    --error-bg-color: #ffebeb; /* Light red background on error */
+  
+    /* Font Sizes */
+    --font-size-base: 1rem; /* 16px */
+    --font-size-lg: 2rem; /* 32px */
+    --font-size-sm: 0.85rem; /* 13.6px */
+    --font-size-xs: 0.75rem; /* 12px */
+  
+    /* Spacing */
+    --space-xs: 0.625rem; /* 10px */
+    --space-sm: 0.75rem; /* 12px */
+    --space-md: 1.25rem; /* 20px */
+    --space-lg: 1.875rem; /* 30px */
+    --space-xl: 2.5rem; /* 40px */
+  
+    /* Border Radius */
+    --border-radius: 0.625rem; /* 10px */
+    --border-radius-lg: 1.25rem; /* 20px */
+  
+    /* Shadows */
+    --box-shadow: 0 0.75rem 2.1875rem rgba(0, 0, 0, 0.1); /* Soft shadow */
+    --box-shadow-hover: 0 0.625rem 1.25rem rgba(26, 13, 153, 0.3); /* Hover shadow */
+  }
+  
+  /* Universal styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 16px; /* Base font size */
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color); /* White background */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-xl) var(--space-sm); /* Padding from custom spacing */
+    color: #333; /* Dark text for readability */
+  }
+  
+  .container {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--space-xl); /* Padding from custom spacing */
+    width: 100%;
+    max-width: 31.25rem; /* 500px */
+    box-shadow: var(--box-shadow); /* Custom shadow */
+    border: 1px solid #ddd; /* Light border */
+    animation: fadeIn 0.8s ease;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: var(--font-size-lg); /* Large font size for title */
+    color: var(--primary-color); /* Soft blue color */
+    margin-bottom: var(--space-lg); /* Margin from custom spacing */
+  }
+  
+  h2 i {
+    margin-right: var(--space-xs); /* Small margin for icon */
+  }
+  
+  .form-group {
+    margin-bottom: var(--space-md); /* Margin from custom spacing */
+    position: relative;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: var(--space-xs); /* Small margin */
+    color: var(--primary-color); /* Soft blue color for label */
+    font-weight: 600;
+    font-size: var(--font-size-base); /* Base font size for labels */
+  }
+  
+  label i {
+    margin-right: var(--space-xs); /* Small margin for icon in label */
+  }
+  
+  input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md); /* Padding from custom spacing */
+    border: 0.0625rem solid #ccc; /* Light border */
+    border-radius: var(--border-radius); /* Rounded corners */
+    font-size: var(--font-size-base); /* Base font size for inputs */
+    background-color: var(--input-bg-color); /* Light grey background */
+    color: #333; /* Dark text in inputs */
+    transition: 0.3s ease;
+    outline: none;
+  }
+  
+  input:focus {
+    background-color: var(--background-color); /* White background on focus */
+    border-color: var(--primary-color); /* Blue border on focus */
+    box-shadow: 0 0 0 0.1875rem rgba(26, 13, 153, 0.2); /* Soft blue focus shadow */
+  }
+  
+  input.error {
+    background-color: var(--error-bg-color); /* Light red background on error */
+    border-color: var(--accent-color); /* Red border on error */
+  }
+  
+  .error-message {
+    font-size: var(--font-size-sm); /* Small font size for error message */
+    color: var(--accent-color); /* Red text for error messages */
+    margin-top: var(--space-xs); /* Small margin for error */
+    display: none;
+    position: absolute;
+    bottom: -1.25rem; /* Position below input */
+    left: 0;
+  }
+  
+  button {
+    width: 100%;
+    padding: var(--space-sm); /* Padding from custom spacing */
+    border: none;
+    border-radius: var(--border-radius); /* Rounded corners */
+    background-color: var(--primary-color); /* Blue background */
+    color: var(--background-color); /* White text */
+    font-size: var(--font-size-base); /* Base font size for button */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.03125rem; /* Small letter spacing */
+  }
+  
+  button i {
+    margin-right: var(--space-xs); /* Small margin for icon in button */
+  }
+  
+  button:hover {
+    background-color: var(--primary-color-dark); /* Darker blue on hover */
+    transform: scale(1.03);
+    box-shadow: var(--box-shadow-hover); /* Hover shadow */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(var(--space-lg)); /* Move element from below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

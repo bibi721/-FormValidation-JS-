@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slick Form UI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-wM8v5a8klW/YFv0uN/dBJENs4sNXpyROvDL4UNMeLQ+/HfFz1K08iEQKHHR3NNZZQihFRc3v8RYmT7M+7VJ3Zg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <div class="container">
+    <form id="awesomeForm" novalidate>
+      <h2><i class="fas fa-user-circle"></i> Register Account</h2>
+
+      <div class="form-group">
+        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+        <input type="text" id="name" name="name" required />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+        <input type="email" id="email" name="email" required />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i> Password</label>
+        <input type="password" id="password" name="password" required />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword"><i class="fas fa-lock"></i> Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required />
+        <small class="error-message"></small>
+      </div>
+
+      <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+    </form>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
